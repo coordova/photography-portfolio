@@ -28,8 +28,10 @@ const Home = () => {
 					</div>
 
 					{/* img */}
-					<div className="flex justify-end">
-						<img src={WomanImg} alt="woman" />
+					<div className="flex justify-end max-h-96  lg:max-h-max">
+						<div className="relative lg:-right-40 overflow-hidden">
+							<img src={WomanImg} alt="woman" />
+						</div>
 					</div>
 				</div>
 			</div>
