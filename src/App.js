@@ -17,6 +17,9 @@ const App = () => {
 				<Header />
 				<AnimRoutes />
 			</Router>
+
+			{/* cursor */}
+			<div className="w-[32px] h-[32px] bg-primary rounded-full fixed top-0 left-0 pointer-events-none z-50"></div>
 		</>
 	);
 };
