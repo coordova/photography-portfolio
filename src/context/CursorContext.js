@@ -11,18 +11,16 @@ const CursorProvider = ({ children }) => {
 	});
 
 	useEffect(() => {
-		const move = (e) => {
+		const handleMouseMove = (e) => {
 			setCursorPos({ x: e.clientX, y: e.clientY });
 		};
-		window.addEventListener("mousemove", move); // add event listener
+		window.addEventListener("mousemove", handleMouseMove); // add event listener
 
 		// remove event
 		return () => {
-			window.removeEventListener("mousemove", move);
+			window.removeEventListener("mousemove", handleMouseMove);
 		};
-	});
-
-	// console.log(cursorPos);
+	}, []);
 
 	// cursor variants
 	const cursorVariants = {
@@ -38,7 +36,7 @@ const CursorProvider = ({ children }) => {
 	};
 
 	return (
-		<CursorContext.Provider value={{ cursorVariants }}>
+		<CursorContext.Provider value={{ cursorPos, cursorVariants }}>
 			{children}
 		</CursorContext.Provider>
 	);
