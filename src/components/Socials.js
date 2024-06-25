@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import {
 	ImFacebook,
@@ -8,9 +8,18 @@ import {
 	ImYoutube,
 } from "react-icons/im";
 
+// import context
+import { CursorContext } from "../context/CursorContext";
+
 const Socials = () => {
+	const { handleMouseEnter, handleMouseLeave } = useContext(CursorContext);
+
 	return (
-		<div className="hidden xl:flex ml-24">
+		<div
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
+			className="hidden xl:flex ml-24"
+		>
 			<ul className="flex gap-x-4">
 				<li>
 					<a href="https://www.facebook.com" target="_blank">
