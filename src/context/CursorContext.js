@@ -27,11 +27,11 @@ const CursorProvider = ({ children }) => {
 		default: {
 			x: cursorPos.x - 16,
 			y: cursorPos.y - 16,
-			// backgroundColor: "rgba(0,0,0,0.5)",
-			// transition: {
-			//   type: "tween",
-			//   duration: 0.15,
-			// },
+			backgroundColor: "rgba(0,0,0,0.5)",
+			transition: {
+				type: "tween",
+				duration: 0.15,
+			},
 		},
 	};
 
